@@ -15,7 +15,7 @@
         <audio id="myAudio" src="music/anewbeginning.mp3" type="audio/mp3" autoplay>
         </audio>
         <div class="song-art">
-        <img src="images/beginnings.png" alt="Song Art" height="300px" width="300px">
+        <img src="images/beginnings.png" id="myAlbum" alt="Song Art" height="300px" width="300px">
         </div>
 
 
@@ -36,15 +36,25 @@
 
 <script>
 
-        songs = {
-                song1: "music/anewbeginning.mp3",
-                song2: "music/rumble.mp3",
-                song3: "music/summer.mp3"
-        };
+        songs = [
+
+                {song1: "music/anewbeginning.mp3",
+                 img1: "images/beginnings.png"
+                },
+
+                {song2: "music/rumble.mp3",
+                 img2: "images/rocknroll.jpg"
+                },
+
+                {song3: "music/summer.mp3",
+                img3: "images/summer.jpg"
+                }
+        ];
 
 
 
-        var x = document.getElementById("myAudio"); 
+        var x = document.getElementById("myAudio");
+        var y = document.getElementById("myAlbum");
 
         function playAudio() { 
         x.play(); 
@@ -55,15 +65,18 @@
         }
 
         function songOne() {
-        myAudio.src = songs.song1;
+        x.src = songs[0].song1;
+        y.src = songs[0].img1;
         }
 
         function songTwo() {
-        myAudio.src = songs.song2;
+        x.src = songs[1].song2;
+        y.src = songs[1].img2;
         }
 
         function songThree() {
-        myAudio.src = songs.song3;
+        x.src = songs[2].song3;
+        y.src = songs[2].img3;
         }
 
 
