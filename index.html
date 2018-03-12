@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="jukebox.js"></script>
+</head>
+
+<body>
+
+<div class="player">
+        <audio id="myAudio" src="music/anewbeginning.mp3" type="audio/mp3" autoplay>
+        </audio>
+        <div class="song-art">
+        <img src="images/beginnings.png" alt="Song Art" height="300px" width="300px">
+        </div>
+
+
+        <div class = "controls">
+        <button onclick="playAudio()" type="button">Play</button>
+        <button onclick="pauseAudio()" type="button">Pause</button>
+        </div>
+
+        <ul class="play-list">
+                <li><button onclick="songOne()" type="button">New Beginning</button></li> 
+                <li><button onclick="songTwo()" type="button">Rumple</button></li>
+                <li><button onclick="songThree()" type="button">Summer</button></li>
+        </ul>
+</div>
+        
+
+</body>
+
+<script>
+
+        songs = {
+                song1: "music/anewbeginning.mp3",
+                song2: "music/rumble.mp3",
+                song3: "music/summer.mp3"
+        };
+
+
+
+        var x = document.getElementById("myAudio"); 
+
+        function playAudio() { 
+        x.play(); 
+        } 
+
+        function pauseAudio() { 
+        x.pause(); 
+        }
+
+        function songOne() {
+        myAudio.src = songs.song1;
+        }
+
+        function songTwo() {
+        myAudio.src = songs.song2;
+        }
+
+        function songThree() {
+        myAudio.src = songs.song3;
+        }
+
+
+//onclick = function(){myScript};
+//this.x
+
+
+
+
+</script>
+
+
+</html>
