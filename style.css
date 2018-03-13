@@ -9,10 +9,19 @@ html body {
 .title {
     font-size: 70px;
     text-align: center;
-    margin: 50px;
+    margin: 40px;
     font-family: digital;
     color: #0C6187;
     font-weight: bold;
+
+}
+
+.instructions {
+    text-align: center;
+    font-family: digital;
+    color: #0C6187;
+    font-weight: bold;
+    font-size: 25px;
 
 }
 
@@ -90,7 +99,7 @@ img {
 }
 
 .play:focus {
-    border: none;
+    outline: none;
 
 }
 
