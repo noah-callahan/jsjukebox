@@ -6,13 +6,19 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
     <script src="jukebox.js"></script>
 </head>
 
 <body>
 
+<h1 class="title animated pulse">Basic Jukebox</h1>
+<p class="instructions">Select a song, then press Play.</p>
+
 <div class="player">
-        <audio id="myAudio" src="music/anewbeginning.mp3" type="audio/mp3" autoplay>
+        <audio id="myAudio" src="music/anewbeginning.mp3" type="audio/mp3">
         </audio>
         <div class="song-art">
         <img src="images/beginnings.png" id="myAlbum" alt="Song Art" height="300px" width="300px">
@@ -20,73 +26,21 @@
 
 
         <div class = "controls">
-        <button onclick="playAudio()" type="button">Play</button>
-        <button onclick="pauseAudio()" type="button">Pause</button>
+        <button onclick="Jukebox.playAudio()" type="button" class="play">Play</button>
+        <button onclick="Jukebox.pauseAudio()" type="button" class="play" >Pause</button>
+        <button onclick="Jukebox.stopAudio()" type="button" class="play" >Stop</button>
         </div>
 
         <ul class="play-list">
-                <li><button onclick="songOne()" type="button">New Beginning</button></li> 
-                <li><button onclick="songTwo()" type="button">Rumple</button></li>
-                <li><button onclick="songThree()" type="button">Summer</button></li>
+                <li><button onclick="Jukebox.songOne()" type="button" class="play">Beginning</button></li> 
+                <li><button onclick="Jukebox.songTwo()" type="button" class="play">Rumple</button></li>
+                <li><button onclick="Jukebox.songThree()" type="button" class="play">Summer</button></li>
         </ul>
 </div>
         
 
 </body>
 
-<script>
-
-        songs = [
-
-                {song1: "music/anewbeginning.mp3",
-                 img1: "images/beginnings.png"
-                },
-
-                {song2: "music/rumble.mp3",
-                 img2: "images/rocknroll.jpg"
-                },
-
-                {song3: "music/summer.mp3",
-                img3: "images/summer.jpg"
-                }
-        ];
-
-
-
-        var x = document.getElementById("myAudio");
-        var y = document.getElementById("myAlbum");
-
-        function playAudio() { 
-        x.play(); 
-        } 
-
-        function pauseAudio() { 
-        x.pause(); 
-        }
-
-        function songOne() {
-        x.src = songs[0].song1;
-        y.src = songs[0].img1;
-        }
-
-        function songTwo() {
-        x.src = songs[1].song2;
-        y.src = songs[1].img2;
-        }
-
-        function songThree() {
-        x.src = songs[2].song3;
-        y.src = songs[2].img3;
-        }
-
-
-//onclick = function(){myScript};
-//this.x
-
-
-
-
-</script>
-
+<script src="jukebox.js"></script>
 
 </html>

@@ -1,28 +1,136 @@
+html body {
+    background-color: rgb(169, 193, 224);
+    width:100%;
+    height:100%;
+    margin: 0 auto;
+    
+}
+
+.title {
+    font-size: 70px;
+    text-align: center;
+    margin: 40px;
+    font-family: digital;
+    color: #0C6187;
+    font-weight: bold;
+
+}
+
+.instructions {
+    text-align: center;
+    font-family: digital;
+    color: #0C6187;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+
+/*start title pulse animation*/
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+  }
+
+  @keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
+
+  .animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+  
+/*stop title pulse animation*/
+
+@font-face {
+    font-family: digital;
+    src: url(DS-DIGII.TTF);
+}
+
 .player {
-margin-left: auto;
-margin-right: auto;
-width: 410px;
-height: 475px;
-text-align: center;
-border: 4px solid black;
-border-radius: 2em;
-padding: 10px;
+    font-size: 30px;
+    font-family: digital;
+    margin-left: auto;
+    margin-right: auto;
+    width: 430px;
+    height: 770px;
+    text-align: center;
+    border: 8px solid black;
+    background-color: rgb(55, 55, 55);
+    border-radius: 2em;
+    padding: 20px;
+    }
+
+
+
+.song-art {
+    border: 4px solid black;
+    background-color: rgb(75, 75, 75);
+    padding: 10px;
+    border-radius: 2em;
+
 }
 
-.controls{
+img {
+    border-radius: 10px;
+    padding: 5px;
+    
 
 
 }
+
+.play{
+    color: #0C6187;
+    background-color: black;
+    padding: 10px;
+    border-radius: 1em;
+
+}
+
+.play:hover {
+    transform: scale(1.1) translateY(-4px);
+
+}
+
+.play:focus {
+    outline: none;
+
+}
+
+.controls  {
+    padding: 15px;
+
+
+}
+
+
+
 
 .play-list {
     padding: 0px;
+    border: 3px solid black;
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 2em;
+    background-color: rgb(75, 75, 75);
+    
 }
+
 
 
 
 .play-list li {
     list-style-type:none;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    width: 180px;
+    
 
 }
