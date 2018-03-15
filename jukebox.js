@@ -31,8 +31,9 @@ var x = document.getElementById("myAudio");
                 x.pause(); 
                 },
 
-                stopAudio: function() { 
-                x.src = songs[0].stop; 
+                stopAudio: function() {
+                x.pause(); 
+                x.currentTime = 0;
                 },
 
                 songOne: function() {
